@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#05070D" />
+    <meta name="description" content="Uma experiência interativa de Fernanda Ramos: explore o corpo e o DNA com partículas douradas, zoom e som." />
+    <title>DNA of Code · Fernanda Ramos</title>
+    <style>html,body{margin:0;background:#05070D}</style>
+  </head>
+  <body>
+    <section id="welcome" aria-labelledby="welcome-title">
+      <div class="welcome-brand"><span class="brand-monogram" aria-hidden="true">fr.</span><div><strong>Fernanda Ramos</strong><span>EXPERIÊNCIAS DIGITAIS</span></div></div>
+      <div class="welcome-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-helix"></div><span class="art-label">01 / O CÓDIGO DA VIDA</span></div>
+      <div class="welcome-content">
+        <p class="welcome-eyebrow"><span></span> UMA EXPERIÊNCIA DE FERNANDA RAMOS</p>
+        <h1 id="welcome-title">DNA <span>of</span><br>Code<span class="title-dot">.</span></h1>
+        <p class="welcome-lead">A vida em detalhe.<br>A interação em cada descoberta.</p>
+        <p class="welcome-description">Do corpo humano à dupla hélice: uma jornada visual por luz, movimento e curiosidade. Aproxime, explore e transforme cada conexão.</p>
+        <button id="continue" class="welcome-continue">Continuar</button>
+        <div class="welcome-features"><span>Explore o corpo</span><span>Interaja com o DNA</span><span>Descubra curiosidades da vida</span></div>
+      </div>
+      <div class="welcome-bottom"><span>DNA OF CODE — ARTE INTERATIVA</span><p>Interação desenvolvida para o navegador</p></div>
+    </section>
+    <div id="experience" inert aria-hidden="true">
+    <canvas id="scene" tabindex="0" aria-label="Corpo e DNA interativos. Arraste para mover; role ou faça pinça para aproximar. Clique nas conexões para desintegrar. Setas movem; mais e menos aproximam; Home reinicia."></canvas>
+    <header id="intro"><p>FERNANDA RAMOS</p><h1>DNA <span>of</span> Code</h1><p>Uma experiência interativa</p></header>
+    <nav class="experience-controls" aria-label="Controles da experiência">
+      <button id="help-toggle" aria-expanded="true" aria-controls="help" title="Como explorar"><span aria-hidden="true">?</span><span class="control-label">Guia</span></button>
+      <button id="sound" aria-pressed="true" title="Ativar ou desativar som"><span aria-hidden="true">♫</span><span class="control-label">Som ligado</span></button>
+      <button id="reset" title="Reiniciar experiência" aria-label="Reiniciar experiência"><span aria-hidden="true">↺</span></button>
+      <button id="fullscreen" title="Entrar em tela cheia" aria-label="Entrar em tela cheia" aria-pressed="false"><span aria-hidden="true">⛶</span></button>
+    </nav>
+    <aside id="help" aria-label="Instruções de exploração">
+      <p class="help-eyebrow">GUIA DE INTERAÇÃO</p>
+      <h2 id="help-title">Explore o corpo</h2>
+      <p class="help-zoom-callout">O DNA aparece com o zoom. Escolha uma parte do corpo e continue aproximando até revelar a dupla hélice.</p>
+      <dl class="desktop-help"><div><dt>Descobrir o DNA</dt><dd>Role para cima sobre o corpo; continue aproximando</dd></div><div><dt>Mover</dt><dd>Arraste a cena</dd></div><div class="dna-only"><dt>Girar o DNA</dt><dd>Shift + arraste</dd></div></dl>
+      <dl class="touch-help"><div><dt>Descobrir o DNA</dt><dd>Afaste dois dedos sobre o corpo; repita para aproximar</dd></div><div><dt>Mover</dt><dd>Arraste a cena</dd></div><div class="dna-only"><dt>Girar o DNA</dt><dd>Gire com dois dedos</dd></div></dl>
+      <p class="body-only help-effect-note">Você pode descobrir o DNA em qualquer parte do corpo. Não é preciso clicar: continue dando zoom.</p>
+      <div class="dna-only"><p class="help-effect-note">Passe o mouse para iluminar. Clique nas conexões para desintegrar e reconstruir.</p>
+      <button id="stretch-mode" aria-pressed="false">Ativar modo esticar</button>
+      <p class="help-effect-note">Com o modo ativo, arraste uma conexão para curvá-la. Solte para vê-la retornar.</p></div>
+      <p class="help-discovery-note">Clique nos átomos dourados para descobrir curiosidades sobre cérebro, DNA e células. Clique fora para fechar.</p>
+      <p class="help-effect-note">Som ao passar o mouse e clicar no DNA. Use ⛶ para tela cheia; Esc para sair.</p>
+      <p class="help-dismiss-note">Clique fora do guia para fechar. Use ? para abrir novamente.</p>
+      <p class="desktop-help help-note"><kbd>M</kbd> Som <span>·</span> <kbd>Home</kbd> Reiniciar</p>
+    </aside>
+    <div id="zoom-discovery-hint" aria-hidden="true"><strong>Aproxime até descobrir o DNA</strong><span class="desktop-help">Posicione o mouse sobre o corpo e role para cima</span><span class="touch-help">Afaste dois dedos sobre o corpo para aproximar</span></div>
+    <div id="stretch-indicator" hidden><span>Modo esticar ativo · arraste uma conexão</span><button id="stretch-exit" aria-label="Desativar modo esticar">×</button></div>
+    <p id="ui-status" role="status" aria-live="polite"></p>
+    <footer><span>Fernanda Ramos</span><a id="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗️</a></footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
+
